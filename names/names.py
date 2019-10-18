@@ -13,13 +13,13 @@ f.close()
 
 duplicates = []
 
-# *** ORIGINAL ***
+# *** ORIGINAL *** O(n^2)
 # for name_1 in names_1:
 #     for name_2 in names_2:
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-# *** MVP ***
+# *** MVP *** O(n) for inserting names_1, O(log(n)) for searching names_2
 # bst = BinarySearchTree('names')
 # for name_1 in names_1:
 #     bst.insert(name_1)
@@ -28,7 +28,7 @@ duplicates = []
 #     if bst.contains(name_2):
 #         duplicates.append(name_2)
 
-# *** STRETCH ***
+# *** STRETCH *** O(n)
 names_dict = {}
 for name_1 in names_1:
     names_dict[name_1] = name_1
